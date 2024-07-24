@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioenergy Calculator</title>
+    <link rel="stylesheet" href="b1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bioenergy Calculator</h1>
+        <form id="bioenergyForm">
+            <label for="feedstock">Feedstock (required):</label>
+            <select id="feedstock" required onchange="showFeedstockInfo()">
+                <option value="">Select feedstock</option>
+                <option value="harvestResidue">Harvest Residue</option>
+                <option value="salvagedTrees">Salvaged Trees</option>
+                <option value="greenTrees">Green Trees</option>
+            </select>
+            <div id="feedstockInfo" class="info"></div>
+
+            <label for="growingSpeed">Growing Speed:</label>
+            <select id="growingSpeed">
+                <option value="fast">Fast</option>
+                <option value="medium">Medium</option>
+                <option value="slow">Slow</option>
+            </select>
+
+            <label for="transformation">Transformation:</label>
+            <select id="transformation">
+                <option value="chips">Chips</option>
+                <option value="pellets">Pellets</option>
+                <option value="renewableGas">Renewable Gas</option>
+            </select>
+
+            <label for="energyConversion">Energy Conversion:</label>
+            <select id="energyConversion">
+                <option value="heat">Heat</option>
+                <option value="light">Light</option>
+            </select>
+
+            <button type="button" onclick="calculateBioenergy()">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="b1.js"></script>
+
+
+    
+</body>
+</html>
