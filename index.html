@@ -165,106 +165,192 @@ input[type="email"] {
  <!-- index.html -->
 
 <!-- The popup container -->
-<div class="popup-container">
-  <div class="popup">
-    <h2>Enter Your Details</h2>
-    <form id="signUpForm">
-      <input type="email" id="email" name="email" placeholder="Enter your email or number" required>
-      <input type="email" id="email" placeholder="Enter your password" required> 
-  </form>
-  <button type="submit" class="submit-btn">LOGIN</button>
-  &nbsp;&nbsp;
-  <button type="submit" class="submit-btn">SIGN UP</button>
-  <a href="#" id="noThanks">No, thanks</a>
-    <span class="close-popup">X</span>
-  </div>
-</div>
+ <header>
+      <nav class="navbar" style="align-content: right;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div class="nav-logo" style="align-items: center;">
+          <a href="#"><img src="Energy(1)(1).png" alt="logo"></a>
+        </div>
 
-<!-- Your website content here -->
-    <header>
-  <nav class="navbar">
-    <div class="nav-logo">
-      <a href="#"><img src="Energy(1)(1).png" alt="logo"></a>
-    </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <div class="address">
+          <a href="#" class="deliver">Deliver</a>
+          <div class="map-icon">
+            <span class="material-symbols-outlined">location_on</span>
+            <a href="#" class="location">India</a>
+          </div>
+        </div> -->
 
-    <label class="menu-toggle">
-      <input type="checkbox">
-      <span class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </label>
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px; font-weight: bolder; font-size: 20px; ">
+          <a href="index.html"><p>Home</p></a>
+        </div>
+        &nbsp;
+        
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px; font-weight: bolder; font-size: 20px; ">
+          <a href="info.html"><p>Information</p></a>
+        </div>
+        &nbsp;
 
-    <div class="nav-links">
-      <a href="index.html"><p>Home</p></a>
-      <a href="info.html"><p>Information</p></a>
-      <a href="1.html"><p>Services</p></a>
-      <a href="calc.html"><p>Calculators</p></a>
-    </div>
+        
+        &nbsp;
 
-    <div class="cart">
-      <a href="#">
-        <span class="material-symbols-outlined cart-icon">shopping_cart</span>
-        <p>Cart</p>
-      </a>
-    </div>
-  </nav>
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px; font-weight: bolder; font-size: 20px; ">
+          <a href="1.html"><p>Services</p></a>
+        </div>
+        &nbsp;
 
-  <div class="banner">
-    <div class="banner-content">
-      <div class="panel">
-        <span class="material-symbols-outlined">menu</span>
-        <a href="#" style="color: black; font-size: 16px;">All</a>
-      </div>
+        <div class="returns" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px; font-weight: bolder;font-size: 20px;">
+          <a href="calc.html"><p>Calculators</p>
+            <span > </span></a>
+        </div>
+        &nbsp;
 
-      <ul class="links">
-        <li><a href="#" style="color: black; font-size: 16px;">Today's Deals</a></li>
-        <li><a href="#" style="color: black; font-size: 16px;">Customer Service</a></li>
-      </ul>
+        <!-- <div class="nav-search">
+          <select class="select-search">
+            <option>All</option>
+            <option>All Categories</option>
+            <option>Solar Energy</option>
+            <option>Wind Energy</option>
+            <option>Nuclear Energy</option>
+          </select>
+          <input type="text" placeholder="Search....." class="search-input">
+          <div class="search-icon">
+            <span class="material-symbols-outlined">search</span>
+          </div>
+        </div> -->
 
-      <div class="deals">
-        <a href="#" style="color: black; font-size: 16px;">Shop deals </a>
-      </div>
+        <label class="container">
+          <input type="checkbox" checked="checked">
+            <svg class="bell-regular" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+              <path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path>
+            </svg>
+            <svg class="bell-solid" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+              <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"></path>
+            </svg>
+        </label>
+            &nbsp;
+        <div class="cart">
+          <a href="#">
+            <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+            </a>
+            <p>Cart</p>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
 
-      <div class="nav-search">
-        <select class="select-search">
-          <option>All</option>
-          <option>All Categories</option>
-          <option>Solar Energy</option>
-          <option>Wind Energy</option>
-          <option>Nuclear Energy</option>
-        </select>
-        <input type="text" placeholder="Search....." class="search-input">
-        <div class="search-icon">
-          <span class="material-symbols-outlined">search</span>
+      </nav>
+      
+
+
+    
+
+      
+     
+
+
+      <div class="banner" style="color: black;">
+        <div class="banner-content" style="color: black;">
+          <div class="panel" style="color: black;">
+           
+           
+      
+            <span class="material-symbols-outlined">menu</span>
+            <a href="#" style="color: black; font-size: 16px;">All</a>
+          </div>
+          &nbsp;&nbsp;
+  
+          <ul class="links">
+            <li><a href="#" style="color: black; font-size: 16px;">Today's Deals</a></li>
+            &nbsp;
+            <li><a href="#" style="color: black; font-size: 16px;">Customer Service</a></li>
+          </ul>
+          <div class="deals">
+            <a href="#" style="color: black; font-size: 16px;">Shop deals </a>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+          <div class="nav-search">
+            <select class="select-search">
+              <option>All</option>
+              <option>All Categories</option>
+              <option>Solar Energy</option>
+              <option>Wind Energy</option>
+              <option>Nuclear Energy</option>
+            </select>
+            <input type="text" placeholder="Search....." class="search-input">
+            <div class="search-icon">
+              <span class="material-symbols-outlined">search</span>
+            </div>
+          </div>
+          &nbsp;&nbsp;&nbsp;
+          
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
 
-<section class="hero-section">
-  <h1>FUEL YOUR FUTURE WITH GREEN DATA</h1>
-  <h4>NURTURE THE NATURE</h4>
-  <button id='1front' class="pushable">MAP</button>
-</section>
+
+
+    <section class="hero-section">
+      <h1 style="margin-left: 100px; font-size: 40px; color: rgb(42, 59, 59);border: 2%; border-color: aquamarine;">
+        FUEL YOUR FUTURE WITH GREEN DATA
+      </h1>
+      <h4 style="margin-left: 100px; font-size: 20px; color: rgba(226, 225, 231, 0.84);">
+        NURTURE THE NATURE
+      </h4>
+
+      
+
+      <!-- <div class="🤚">
+        <div class="👉"></div>
+        <div class="👉"></div>
+        <div class="👉"></div>
+        <div class="👉"></div>
+        <div class="🌴"></div>		
+        <div class="👍"></div>
+      </div> -->
+
+     
+      
+      <button id='1front' class="pushable" style="margin-left: 100px;">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front">
+         
+            MAP
+          
+        </span> 
+
+      </button> 
+    </section>
+
+
+
 
 <section class="companies">
-  <p>Energy Kazana</p>
-  <section class="shop-section">
-    <div class="shop-images">
-      <div class="shop-link">
-        <div class="image-container">
-          <img src="ai-generated-8685407_1280.jpg" alt="Solar Energy">
-          <div class="overlay">
-            <h3>SOLAR ENERGY</h3>
-            <a href="ex.html">Learn More</a>
+     <p>Energy Kazana</p>
+    <section class="shop-section" style="background-color: rgba(107, 222, 165, 0.861);">
+      <div class="shop-images">
+        <div class="shop-link">
+          <!-- <h3>SOLAR ENERGY</h3> -->
+          <div class="image-container">
+            <img src="ai-generated-8685407_1280.jpg" alt="Solar Energy">
+            <div class="overlay">
+              <h3>SOLAR ENERGY</h3>
+              <a href="ex.html">Learn More</a>
+            </div>
           </div>
         </div>
-      </div>
-   
-
         <div class="shop-link">
           <!-- <h3>WIND ENERGY</h3> -->
           <div class="image-container">
