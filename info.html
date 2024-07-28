@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage Layout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-logo img {
+  margin-top: 10px;
+  width: 70px;
+}
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+      
+        <div class="nav-logo" style="align-items: center;">
+          <a href="#"><img src="Energy(1)(1).png" alt="logo"></a>
+        </div>
+
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px; font-weight: bolder; color: white;">
+          <a href="index.html"><p>Home</p></a>
+        </div>
+        &nbsp;
+        
+       
+
+        <div class="navbar-brand" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px; font-weight: bolder;font-size: 20px;">
+         <a href="#"> <p>Account</p>
+          <span></span></a>
+        </div>
+        &nbsp;
+
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px; font-weight: bolder; font-size: 20px; ">
+          <a href="#"><p>Services</p></a>
+        </div>
+        &nbsp;
+
+        <div  class=" btn-primary" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px; font-weight: bolder;font-size: 20px; color: aliceblue;" >
+          <a href="calc.html"><p>Calculators</p>
+            <span > </span></a>
+        </div>
+        &nbsp;
+
+        <form class="d-flex" role="search">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Search by Coordinates
+          </button>
+
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    Enter Coordinates
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <input
+                    id="input1"
+                    class="form-control me-2"
+                    placeholder="Enter Latitude of location"
+                  />
+                  <input
+                    id="input2"
+                    class="form-control me-2"
+                    placeholder="Enter Longitude of Location"
+                  />
+                </div>
+                <span id="content">Enter valid input.</span>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    id="submit-button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Search on Map
+          </button>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Map</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div id="fullMap"></div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li class="option active" data-info="info1">Solar Energy</li>
+          <li class="option" data-info="info2">Wind Energy</li>
+          <li class="option" data-info="info3">Hydropower</li>
+          <li class="option" data-info="info4">Bioenergy</li>
+          <li class="option" data-info="info5">Ocean Energy</li>
+          <li class="option" data-info="info6">Option 6</li>
+          <li class="option" data-info="info7">Option 7</li>
+          <li class="option" data-info="info8">Option 8</li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div id="info1" class="info active">
+          <h3>Information about Solar Energy :</h3>
+          <p>
+            Solar energy is the most abundant of all energy resources and can
+            even be harnessed in cloudy weather. The rate at which solar energy
+            is intercepted by the Earth is about 10,000 times greater than the
+            rate at which humankind consumes energy. Solar technologies can
+            deliver heat, cooling, natural lighting, electricity, and fuels for
+            a host of applications. Solar technologies convert sunlight into
+            electrical energy either through photovoltaic panels or through
+            mirrors that concentrate solar radiation. Although not all countries
+            are equally endowed with solar energy, a significant contribution to
+            the energy mix from direct solar energy is possible for every
+            country. The cost of manufacturing solar panels has plummeted
+            dramatically in the last decade, making them not only affordable but
+            often the cheapest form of electricity. Solar panels have a lifespan
+            of roughly 30 years, and come in variety of shades depending on the
+            type of material used in manufacturing.
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Solar energy production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="info2" class="info">
+          <h3>Information about Wind Engergy :</h3>
+          <p>
+            Wind energy harnesses the kinetic energy of moving air by using
+            large wind turbines located on land (onshore) or in sea- or
+            freshwater (offshore). Wind energy has been used for millennia, but
+            onshore and offshore wind energy technologies have evolved over the
+            last few years to maximize the electricity produced - with taller
+            turbines and larger rotor diameters. Though average wind speeds vary
+            considerably by location, the world’s technical potential for wind
+            energy exceeds global electricity production, and ample potential
+            exists in most regions of the world to enable significant wind
+            energy deployment. Many parts of the world have strong wind speeds,
+            but the best locations for generating wind power are sometimes
+            remote ones. Offshore wind power offers tremendous potential
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Wind energy production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="info3" class="info">
+          <h3>Information about Hydropower :</h3>
+          <p>
+            Hydropower harnesses the energy of water moving from higher to lower
+            elevations. It can be generated from reservoirs and rivers.
+            Reservoir hydropower plants rely on stored water in a reservoir,
+            while run-of-river hydropower plants harness energy from the
+            available flow of the river. Hydropower reservoirs often have
+            multiple uses - providing drinking water, water for irrigation,
+            flood and drought control, navigation services, as well as energy
+            supply. Hydropower currently is the largest source of renewable
+            energy in the electricity sector. It relies on generally stable
+            rainfall patterns, and can be negatively impacted by climate-induced
+            droughts or changes to ecosystems which impact rainfall patterns.
+            The infrastructure needed to create hydropower can also impact on
+            ecosystems in adverse ways. For this reason, many consider
+            small-scale hydro a more environmentally-friendly option, and
+            especially suitable for communities in remote locations.
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Hydropower production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="info4" class="info">
+          <h3>Information about Bioenergy :</h3>
+          <p>
+            Bioenergy is produced from a variety of organic materials, called
+            biomass, such as wood, charcoal, dung and other manures for heat and
+            power production, and agricultural crops for liquid biofuels. Most
+            biomass is used in rural areas for cooking, lighting and space
+            heating, generally by poorer populations in developing countries.
+            Modern biomass systems include dedicated crops or trees, residues
+            from agriculture and forestry, and various organic waste streams.
+            Energy created by burning biomass creates greenhouse gas emissions,
+            but at lower levels than burning fossil fuels like coal, oil or gas.
+            However, bioenergy should only be used in limited applications,
+            given potential negative environmental impacts related to
+            large-scale increases in forest and bioenergy plantations, and
+            resulting deforestation and land-use change.
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Bioenergy production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="info5" class="info">
+          <h3>Information about Ocean Energy :</h3>
+          <p>
+            Ocean energy derives from technologies that use the kinetic and
+            thermal energy of seawater - waves or currents for instance - to
+            produce electricity or heat. Ocean energy systems are still at an
+            early stage of development, with a number of prototype wave and
+            tidal current devices being explored. The theoretical potential for
+            ocean energy easily exceeds present human energy requirements.
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Ocean energy production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="info6" class="info">
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Solar energy production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="info7" class="info">
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Solar energy production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="info8" class="info">
+          <table>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>Faridabad</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>Haryana</td>
+              </tr>
+              <tr>
+                <td>country</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>Total Requirement</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Solar energy production</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Total Installed capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Potential intall capacity</td>
+                <td>1000kWH</td>
+              </tr>
+              <tr>
+                <td>Other clean energy productuon</td>
+                <td>1000kWH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="main-section">
+        <div class="main-section-tital">Your location on Map</div>
+        <div class="top-section">
+          <div id="map"></div>
+        </div>
+        <div class="main-section-tital">News and Policies</div>
+        <div class="bottom-section">
+          <div>
+            <div class="card mb-3" style="max-width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="image. 1jpeg.jpeg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a
+                        class="news"
+                        href="https://www.livemint.com/budget/news/budget-2024-india-gives-big-policy-boost-to-energy-transition-curb-emissions-11721729506183.html"
+                        >Budget 2024: India gives big policy boost to energy
+                        transition, curb emissions | Mint</a
+                      >
+                    </h5>
+                    <p class="card-text">
+                      In her budget speech on Tuesday, Sitharaman said that the
+                      government will soon come out with a taxonomy for climate
+                      finance, which will make...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="download (1).jpeg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a
+                        class="news"
+                        href="https://upstox.com/news/business-news/latest-updates/india-s-renewable-energy-sector-to-attract-investments-worth-30-5-lakh-crore-by-2030-eco-survey/article-103691/"
+                        >India's renewable energy sector to attract investments
+                        worth ₹30.5 lakh crore by 2030: Eco Survey</a
+                      >
+                    </h5>
+                    <p class="card-text">
+                      India has put in place a target of achieving 50%
+                      cumulative installed capacity for generating electric
+                      power from non-fossil fuel-based...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="image. 1jpeg.jpeg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="download (1).jpeg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="info.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key= 
+      AIzaSyCh22dsVMQMPmgWvQeMP8t4mn3ke0E0BBw&callback=fMap"
+    ></script>
+  </body>
+</html>

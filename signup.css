@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  }
+  
+  .popup {
+    position: absolute;
+    top: 20%; /* Adjust top position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px; /* Adjust width as needed */
+  }
+  
+.popup h2 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #A52A2A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+}
+
+.submit-btn:hover {
+    background-color: #8B0000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#noThanks {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+    text-decoration: none;
+}
+
+#noThanks:hover {
+    text-decoration: underline;
+}
+
+.popup-visible {
+    visibility: visible;
+    opacity: 1;
+}

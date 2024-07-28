@@ -1,0 +1,218 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #20c454, #acb6e5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border: 1px solid #74ebd5;
+    box-shadow: 0 0 5px rgba(116, 235, 213, 0.5);
+}
+
+/* button {
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+} */
+button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0em 1em 1em;
+    background-color: yellow;
+    cursor: pointer;
+    box-shadow: 4px 6px 0px black;
+    border: 4px solid;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    transition: box-shadow 250ms, transform 250ms, filter 50ms;
+  }
+  button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 3px 0px black;
+  }
+  button:active {
+    filter: saturate(0.75);
+  }
+  button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: pink;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 250ms;
+  }
+  button:hover::after {
+    transform: translateX(0);
+  }
+  .bgContainer {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    max-width: 35%; /* adjust this if the button text is not proper */
+    font-size: 2em;
+    font-weight: 600;
+  }
+  .bgContainer span {
+    position: relative;
+    transform: translateX(-100%);
+    transition: all 250ms;
+  }
+  .button:hover .bgContainer > span {
+    transform: translateX(0);
+  }
+  .arrowContainer {
+    padding: 1em;
+    margin-inline-end: 1em;
+    border: 4px solid;
+    border-radius: 50%;
+    background-color: rgb(255, 192, 203);
+    position: relative;
+    overflow: hidden;
+    transition: transform 250ms, background-color 250ms;
+    z-index: 100;
+  }
+  .arrowContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: rgb(254, 254, 254);
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: transform 250ms ease-in-out;
+  }
+  button:hover .arrowContainer::after {
+    transform: translateX(0);
+  }
+  button:hover .arrowContainer {
+    transform: translateX(5px);
+  }
+  button:active .arrowContainer {
+    transform: translateX(8px);
+  }
+  .arrowContainer svg {
+    vertical-align: middle;
+  }
+  
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+
+.tab-button:hover {
+    background-color: #2980b9;
+}
+
+.tab-button.active {
+    background-color: #2980b9;
+}
+
+.calculator {
+    display: none;
+}
+
+.calculator.active {
+    display: block;
+}

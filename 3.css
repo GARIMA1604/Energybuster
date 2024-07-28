@@ -1,0 +1,17 @@
+#map, #fullMap{
+  height: 400px;
+  width: 100%;
+}
+
+.modal-header {
+  background-color: #0b8800d9;
+}
+
+.me-2 {
+  margin-right: .5rem !important;
+  margin: 6px;
+}
+
+#content {
+  text-align: center;
+}

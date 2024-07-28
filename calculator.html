@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+             .container2 {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    text-align: center;
+    height: small;
+    float:right;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color:rgb(48, 163, 111);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+#result {
+    margin-top: 20px;
+    /* font-size: 1.2em; */
+   
+
+
+  
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div class="container2">
+      <h1>Solar Calculator</h1>
+      <form id="solarForm">
+          <label for="energy">Daily Energy Consumption (kWh):</label>
+          <input type="number" id="energy" placeholder="Enter energy consumption" required>
+
+          <label for="roofArea">Total Roof Top Area (sq ft):</label>
+          <input type="number" id="roofArea" placeholder="Enter rooftop area" required>
+
+          <label for="panelCapacity">Solar Panel Capacity (kW):</label>
+          <input type="number" id="panelCapacity" placeholder="Enter panel capacity" required>
+
+          <label for="budget">Your Budget (Rs.):</label>
+          <input type="number" id="budget" placeholder="Enter your budget" required>
+
+          <label for="state">Select State:</label>
+          <select id="state">
+              <option value="state2">Andaman and Nicobar Islands </option>
+              <option value="state1"> Andhra Pradesh </option>
+              <option value="state2">
+                  Arunachal Pradesh </option>
+              <option value="state2">Assam </option>
+              <option value="state2">
+                  Bihar </option>
+              <option value="state2">
+                  Chhattisgarh</option>
+              <option value="state2"> Dadra and Nagar Haveli </option>
+              <option value="state2"> Daman and Diu</option>
+              <option value="state2"> Delhi </option>
+              <option value="state2">
+                  Goa </option>
+              <option value="state2">
+                  Gujarat </option>
+              <option value="state2">
+                  Haryana </option>
+              <option value="state2"> Himachal Pradesh</option>
+              <option value="state2"> Jammu & Kashmir </option>
+              <option value="state2">
+                  Lakshadweep </option>
+              <option value="state2">
+                  Jharkhand</option>
+              <option value="state2"> Karnataka</option>
+              <option value="state2">Kerala </option>
+              <option value="state2">
+                  Madhya Pradesh </option>
+              <option value="state2"> Maharashtra</option>
+              <option value="state2">Manipur </option>
+              <option value="state2"> Meghalaya</option>
+              <option value="state2">Mizoram </option>
+              <option value="state2"> Nagaland</option>
+              <option value="state2">Odisha </option>
+              <option value="state2">Puducherry </option>
+              <option value="state2">
+                  Punjab</option>
+              <option value="state2">
+                  Rajasthan</option>
+              <option value="state2">
+                  Sikkim</option>
+              <option value="state2"> Tamil Nadu</option>
+              <option value="state2">Telangana </option>
+              <option value="state2">Tripura </option>
+              <option value="state2"> Uttar Pradesh</option>
+              <option value="state2">Uttarakhand </option>
+              <option value="state2"> West Bengal</option>
+
+
+              <!-- Add more states as needed -->
+          </select>
+
+          <label for="category">Select Customer Category:</label>
+          <select id="category">
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+              <option value="industrial">Industrial</option>
+          </select>
+
+          <label for="electricityCost">Average Electricity Cost (Rs./kWh):</label>
+          <input type="number" id="electricityCost" value="8" required>
+
+          <button type="button" onclick="calculateSolar()">Calculate</button>
+      </form>
+      <div id="result"></div>
+  </div>
+  </div>
+</body>
+<script src="s1.js"></script>
+</html>
