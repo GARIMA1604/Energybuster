@@ -19,6 +19,33 @@ a {
 a:hover {
   color: #ddd;
 }
+/* ... existing CSS ... */
+
+/* Responsive adjustments */
+
+@media screen and (max-width: 1200px) {
+  /* Medium screens */
+  .navbar {
+    /* Adjust navbar elements for medium screens */
+  }
+  .hero-section {
+    /* Adjust hero section height or content for medium screens */
+  }
+  .shop-images {
+    /* Adjust grid layout for medium screens */
+  }
+  /* ... other section adjustments ... */
+}
+
+@media screen and (max-width: 768px) {
+  /* Tablet screens */
+  /* ... adjust styles for tablet screens ... */
+}
+
+@media screen and (max-width: 480px) {
+  /* Mobile screens */
+  /* ... adjust styles for mobile screens ... */
+}
 
 /* Header or Navbar */
 header {
